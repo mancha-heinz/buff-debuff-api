@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- fontawesome -->
-    <!-- <script
-      src="https://kit.fontawesome.com/1362334b71.js"
-      crossorigin="anonymous"
-    ></script> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
     <!-- bootstrap 5.3.5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
@@ -28,13 +21,13 @@
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/script.js"></script>
 
-    <title>RPG_API</title>
+    <title>Buff_Debuff_API</title>
   </head>
 
   <body>
     <div class="container">
       <header class="text-center text-light my-4">
-        <h1 class="mb-4">buff/debuff</h1>
+        <h1 class="mb-4">Mei - buff/debuff</h1>
         <form class="search">
           <input
             class="form-control m-auto input-search"
@@ -43,9 +36,14 @@
             placeholder=""
           />
         </form>
+        <div type="button" class="btn btn-light mt-3 btn-pass-round">
+          Pass Round
+        </div>
       </header>
 
-      <ul class="list-group mx-auto text-light list-todos"></ul>
+      <ul
+        class="list-group list-group-numbered mx-auto text-light list-todos"
+      ></ul>
 
       <form class="form-add text-center my-4">
         <label class="text-light">New buff/debuff...</label>
@@ -58,7 +56,7 @@
           placeholder="ex: atq"
         />
         <br />
-        <!-- <input
+        <input
           type="text"
           class="form-control m-auto input-bonus"
           name="bonus"
@@ -74,10 +72,10 @@
           data-rodada=""
           value=""
           placeholder="ex: 10 round"
-        /> -->
+        />
         <br />
         <div class="text-center">
-          <input type="submit" class="btn btn-light btn-add" />
+          <button type="submit" class="btn btn-light btn-add">Add</button>
         </div>
       </form>
 
@@ -88,11 +86,7 @@
       <ul
         class="list-group rounded-0 list-group-horizontal justify-content-center pb-2"
       >
-        <img
-          src="#"
-          alt=""
-          style="width: 45px; height: auto"
-        />
+        <img src="#" alt="" class="logo" />
       </ul>
     </div>
   </body>

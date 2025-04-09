@@ -57,3 +57,8 @@ body {
   height: 1px;
   background: #eee;
 }
+
+.logo {
+  width: 45px;
+  height: auto;
+}

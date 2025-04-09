@@ -1,30 +1,32 @@
 const add_form = document.querySelector(".form-add");
 const list = document.querySelector(".list-todos");
 const search = document.querySelector(".input-search");
+const btn_pass_round = document.querySelector(".btn-pass-round");
 
 // add new todo
-const generate_template = (todo) => {
+const generate_template = (effect, qtd, round) => {
   const html = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
-      <span class="effect">${todo}</span>
-      <!-- <span class="bonus"></span> -->
-      <!-- <span class="round"></span> -->
-      <span>
-        <img src="/img/pencil.svg" alt="" class="icon">
-        <img src="/img/trash.svg" alt="" class="icon btn-delete">
-      </span>
-      <i class="far fa-trash-alt btn-delete"></i>
+      <div class="effect">${effect}</div>
+      <div class="bonus">${qtd}</div>
+      <div class="round">${round} rod.</div>
+      <img src="/img/trash.svg" alt="" class="icon btn-delete">
     </li>
   `;
   list.innerHTML += html;
 };
 
-// limpa todo form -> inputs e previne inputs c/ espaço em brnco desnecessario
+// limpa todo form -> inputs e previne inputs c/ espaço em branco desnecessario
 add_form.addEventListener("submit", (e) => {
   e.preventDefault();
+  const effect = add_form[0].value;
+  const qtd = add_form[1].value;
+  const round = add_form[2].value;
+  // console.log(add_form[0].value);
+
   const todo = add_form.add.value.trim();
-  if (todo.length) {
-    generate_template(todo);
+  if (effect.length && qtd.length && round.length) {
+    generate_template(effect, qtd, round);
     add_form.reset();
   }
 });
@@ -32,7 +34,7 @@ add_form.addEventListener("submit", (e) => {
 // delete current todo
 list.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-delete")) {
-    e.target.parentElement.parentElement.remove();
+    e.target.parentElement.remove();
   }
 });
 
@@ -51,4 +53,18 @@ const filter_todo = (term) => {
 search.addEventListener("keyup", () => {
   const term = search.value.trim().toLowerCase();
   filter_todo(term);
+});
+
+// ao clicar btn-pass-round, diminuir em 1, qtd maxima de rodadas
+btn_pass_round.addEventListener("click", () => {
+  // percorrer todas as div 'round'
+  let rounds = document.querySelectorAll(".round");
+  Array.from(rounds).forEach((round) => {
+    // console.log(round);
+    let round_num = round.innerText.replace(" rod.", ""); // pega o num. rodadas, apenas
+    // verifica se qtd rodada é maior q 0, att. qtd rodadas (text). caso contrario excluir <li>
+    round_num > 0
+      ? (round.innerText = `${round_num - 1} rod.`)
+      : round.parentElement.remove();
+  });
 });
