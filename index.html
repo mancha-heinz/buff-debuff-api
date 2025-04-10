@@ -47,47 +47,43 @@
 
       <form class="form-add text-center my-4">
         <label class="text-light">New buff/debuff...</label>
-        <input
-          type="text"
-          class="form-control m-auto input-efeito"
-          name="add"
-          data-efeito=""
-          value=""
-          placeholder="ex: atq"
-        />
-        <br />
-        <input
-          type="text"
-          class="form-control m-auto input-bonus"
-          name="bonus"
-          data-efeito=""
-          value=""
-          placeholder="ex: +9"
-        />
-        <br />
-        <input
-          type="text"
-          class="form-control m-auto input-rodada"
-          name="rodada"
-          data-rodada=""
-          value=""
-          placeholder="ex: 10 round"
-        />
-        <br />
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <input
+              type="text"
+              class="form-control form-control-sm input-efeito"
+              placeholder="ex: atq"
+            />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <input
+              type="text"
+              class="form-control form-control-sm input-bonus"
+              placeholder="ex: +4"
+            />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <input
+              type="text"
+              class="form-control form-control-sm input-rodada"
+              placeholder="ex: 10 rod"
+            />
+          </div>
+        </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-light btn-add">Add</button>
+          <button type="submit" class="btn btn-sm btn-outline-light btn-add">
+            Add
+          </button>
         </div>
       </form>
 
-      <div class="divider d-flex align-items-center my-4">
-        <!-- <p class="text-center mx-3 mb-0" style="color: #a2aab7">Shared with</p> -->
+      <div class="divider d-flex align-items-center my-4 btn-img-plus">
+        <img src="img/plus-lg.svg" class="text-center mx-3 mb-0 img-plus" />
       </div>
-
-      <ul
-        class="list-group rounded-0 list-group-horizontal justify-content-center pb-2"
-      >
-        <img src="#" alt="" class="logo" />
-      </ul>
     </div>
   </body>
 </html>

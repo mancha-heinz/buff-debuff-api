@@ -2,6 +2,7 @@ const add_form = document.querySelector(".form-add");
 const list = document.querySelector(".list-todos");
 const search = document.querySelector(".input-search");
 const btn_pass_round = document.querySelector(".btn-pass-round");
+const img_plus = document.querySelector(".btn-img-plus");
 
 // add new todo
 const generate_template = (effect, qtd, round) => {
@@ -22,12 +23,11 @@ add_form.addEventListener("submit", (e) => {
   const effect = add_form[0].value;
   const qtd = add_form[1].value;
   const round = add_form[2].value;
-  // console.log(add_form[0].value);
 
-  const todo = add_form.add.value.trim();
   if (effect.length && qtd.length && round.length) {
     generate_template(effect, qtd, round);
     add_form.reset();
+    add_form.style.setProperty("display", "none");
   }
 });
 
@@ -62,9 +62,15 @@ btn_pass_round.addEventListener("click", () => {
   Array.from(rounds).forEach((round) => {
     // console.log(round);
     let round_num = round.innerText.replace(" rod.", ""); // pega o num. rodadas, apenas
+    round_num -= 1; // diminui rodada
     // verifica se qtd rodada é maior q 0, att. qtd rodadas (text). caso contrario excluir <li>
-    round_num > 0
-      ? (round.innerText = `${round_num - 1} rod.`)
+    round_num >= 1
+      ? (round.innerText = `${round_num} rod.`)
       : round.parentElement.remove();
   });
+});
+
+// exibe form. p/ add, alterando o css
+img_plus.addEventListener("click", () => {
+  add_form.style.setProperty("display", "block");
 });
