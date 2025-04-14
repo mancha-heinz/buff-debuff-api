@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- links boostrap v5.3.3 -->
+    <!-- vendor css files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- main css file -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- links -->
+    <link
+      rel="shortcut icon"
+      href="/favicons/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/script.js"></script>
+
+    <title>Buff_Debuff_API</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <header class="text-center text-light my-4">
+          <h1 class="mb-4">Mei - buff/debuff</h1>
+          <form class="search">
+            <input
+              class="form-control m-auto input-search"
+              type="text"
+              name="search"
+              placeholder=""
+            />
+          </form>
+          <div type="button" class="btn btn-light mt-3 btn-pass-round">
+            Pass Round
+          </div>
+        </header>
+
+        <ul
+          class="list-group list-group-numbered mx-auto text-light list-todos"
+        ></ul>
+
+        <form class="form-add text-center my-4">
+          <label class="text-light">New buff/debuff...</label>
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <input
+                type="text"
+                class="form-control form-control-sm input-efeito"
+                placeholder="ex: atq"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <input
+                type="text"
+                class="form-control form-control-sm input-bonus"
+                placeholder="ex: +4"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <input
+                type="text"
+                class="form-control form-control-sm input-rodada"
+                placeholder="ex: 10 rod"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-sm btn-outline-light btn-add">
+              Add
+            </button>
+          </div>
+        </form>
+
+        <div class="divider d-flex align-items-center my-4 btn-img-plus">
+          <img src="img/plus-lg.svg" class="text-center mx-3 mb-0 img-plus" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

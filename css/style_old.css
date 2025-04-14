@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", cursive;
+}
+
+body {
+  text-align: center;
+  /* background: linear-gradient(to bottom, #6ab7f5, #fff); */
+  background: #352f5b;
+  min-height: 90vh;
+  font-size: 23px;
+}
+
+.container {
+  max-width: 400px;
+}
+
+.input-search,
+.input-search:focus {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.list-todos li {
+  background: #423a6f;
+  color: #fff;
+}
+
+.btn-delete {
+  cursor: pointer;
+}
+
+.filtered {
+  display: none !important;
+}
+
+.form-add {
+  display: none;
+}
+
+.img-plus {
+  background: #352f5b;
+  transform: scale(1.5);
+}
+
+.btn-add:hover {
+  background: #423a6f;
+  color: #fff;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 13px 13px;
+  transition: 0.8s;
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
