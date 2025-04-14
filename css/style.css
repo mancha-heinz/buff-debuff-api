@@ -10,8 +10,8 @@
 body {
   text-align: center;
   /* background: linear-gradient(to bottom, #6ab7f5, #fff); */
-  /* background: #352f5b; */
-  background: linear-gradient(to bottom, #352f5b, #482569);
+  background: #352f5b;
+  /* background: linear-gradient(to bottom, #352f5b, #482569); */
   min-height: 100vh;
   /* font-size: 23px; */
 }
@@ -26,7 +26,9 @@ main {
 
 .list-effect {
   /* background: linear-gradient(to bottom, #352f5b, #482569); */
-  background: #482569;
+  /* background: #482569; */
+  background: #423a6f;
+  color: #fff;
 }
 
 .divider:after,
