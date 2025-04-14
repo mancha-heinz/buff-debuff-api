@@ -24,6 +24,13 @@ main {
   position: relative;
 }
 
+.input-search {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
 .list-effect {
   /* background: linear-gradient(to bottom, #352f5b, #482569); */
   /* background: #482569; */

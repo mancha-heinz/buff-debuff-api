@@ -11,7 +11,7 @@ const generate_template = (effect, qtd, round) => {
       <div class="effect">${effect}</div>
       <div class="bonus">${qtd}</div>
       <div class="round">${round} rod.</div>
-      <img src="/img/trash.svg" alt="" class="icon btn-delete">
+      <img src="./img/trash.svg" alt="" class="icon btn-delete">
     </li>
   `;
   list.innerHTML += html;
